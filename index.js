@@ -1,10 +1,11 @@
 const express = require('express')
 const uuid = require('uuid')
+const cors = require('cors')
 
 const port = 3002
 const app = express()
 app.use(express.json())
-
+app.use(cors())
 /*
     - Query params => meusite.com/users?name=rodolfo&age=28 - FILTROS
     - Route params => /users/2 - BUSCAR, DELETAR OU ATUALIZAR ALGO ESPECÍFICO
